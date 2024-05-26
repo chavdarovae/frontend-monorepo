@@ -56,7 +56,6 @@
 			"!{projectRoot}/cypress.config.[jt]s"
 		]
 	},
-	"nxCloudAccessToken": "ZTNkZjViZTktYzM2ZC00MzQ0LTk3NzItYTlmNzRkMTIwMWZmfHJlYWQtd3JpdGU=",
 	"generators": {
 		"@nx/angular:application": {
 			"style": "css",
