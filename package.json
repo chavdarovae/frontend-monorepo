@@ -8,7 +8,7 @@
 		"start:secondApp": "nx serve secondApp",
 		"build": "nx build",
 		"build:all": "nx run-many --targets=build",
-		"build:prod:firstApp": "nx build firstApp --configuration=production",
+		"build:prod:firstApp": "nx build firstApp --configuration=production --base-href=/frontend-monorepo/",
 		"build:prod:secondApp": "nx build secondApp --configuration=production",
 		"build:prod:affected": "nx affected:build --configuration=production",
 		"watch": "nx build --watch --configuration development",
