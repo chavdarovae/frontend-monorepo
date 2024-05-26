@@ -1,4 +1,4 @@
-import { IMenuItem } from "@nodeApp/shared-ui";
+import { IMenuItem } from "@frontend-monorepo/ui-components";
 
 export const SECOND_APP_COLORS: any = {
 	pri: '#d857ec',

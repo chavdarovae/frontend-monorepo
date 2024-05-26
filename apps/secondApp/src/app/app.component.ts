@@ -1,10 +1,9 @@
 import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AuthService } from '@nodeApp/account';
-import { AlertComponent } from '@nodeApp/alert';
-import { AppUtilsService } from '@nodeApp/shared-assets';
-import { FooterComponent, HeaderComponent } from '@nodeApp/shared-ui';
+import { AlertComponent, AppUtilsService } from '@frontend-monorepo/data-access-core';
+import { AuthService } from '@frontend-monorepo/feature-account';
+import { FooterComponent, HeaderComponent } from '@frontend-monorepo/ui-components';
 import { SECOND_APP_COLORS, SECOND_APP_MENUS } from './core/data-access/constants/general.constants';
 
 @Component({

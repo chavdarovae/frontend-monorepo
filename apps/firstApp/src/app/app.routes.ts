@@ -8,6 +8,6 @@ export const FIRST_APP_ROUTES: Routes = [
 	},
 	{
 		path: '',
-		loadChildren: () => import('@nodeApp/account').then(r => r.ACCOUNT_ROUTES)
+		loadChildren: () => import('@frontend-monorepo/feature-account').then(r => r.ACCOUNT_ROUTES)
 	}
 ];

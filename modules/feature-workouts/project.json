@@ -1,0 +1,21 @@
+{
+	"name": "feature-workouts",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "modules/feature-workouts/src",
+	"prefix": "feature-workouts",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "modules/feature-workouts/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"]
+		}
+	}
+}

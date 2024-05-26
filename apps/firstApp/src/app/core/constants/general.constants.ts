@@ -1,4 +1,4 @@
-import { IMenuItem } from "@nodeApp/shared-ui";
+import { IMenuItem } from "@frontend-monorepo/util-models";
 
 export const FIRST_APP_COLORS: any = {
 	pri: '#469597',

@@ -1,0 +1,53 @@
+{
+	"name": "feature-account",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "modules/feature-account/src",
+	"prefix": "feature-account",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "modules/feature-account/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"]
+		},
+		"configurations": {
+			"production": {
+				"budgets": [{
+						"type": "initial",
+						"maximumWarning": "500kb",
+						"maximumError": "1mb"
+					},
+					{
+						"type": "anyComponentStyle",
+						"maximumWarning": "2kb",
+						"maximumError": "4kb"
+					}
+				],
+				"outputHashing": "all",
+				"fileReplacements": [{
+					"replace": "environments/environment.ts",
+					"with": "environments/environment.prod.ts"
+				}]
+			},
+			"development": {
+				"buildOptimizer": false,
+				"optimization": false,
+				"vendorChunk": true,
+				"extractLicenses": false,
+				"sourceMap": true,
+				"namedChunks": true,
+				"fileReplacements": [{
+					"replace": "environments/environment.ts",
+					"with": "environments/environment.dev.ts"
+				}]
+			}
+		}
+	}
+}
