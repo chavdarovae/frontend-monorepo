@@ -12,5 +12,4 @@ import { IMenuItem } from '@frontend-monorepo/util-models';
 })
 export class HeaderComponent {
 	@Input() menuItems!: IMenuItem[];
-	@Input() logoPath!: string;
 }

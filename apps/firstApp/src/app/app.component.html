@@ -1,6 +1,5 @@
 <div class="app">
-	<app-header *ngIf="authService.currUser().email" [menuItems]="appMenuItems"
-		logoPath="../../../../assets/img/logo.png" class="app__header">
+	<app-header *ngIf="authService.currUser().email" [menuItems]="appMenuItems" class="app__header">
 	</app-header>
 	<app-alert></app-alert>
 

@@ -18,7 +18,12 @@
 				"inlineStyleLanguage": "scss",
 				"assets": [
 					"apps/firstApp/src/favicon.ico",
-					"apps/firstApp/src/assets"
+					"apps/firstApp/src/assets",
+                    {
+						"glob": "**/*",
+						"input": "./assets-shared",
+						"output": "assets-shared"
+					}
 				],
 				"styles": [
 					"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
