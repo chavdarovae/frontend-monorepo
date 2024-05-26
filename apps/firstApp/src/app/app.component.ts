@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { AlertComponent, AppUtilsService } from '@frontend-monorepo/data-access-core';
 import { AuthService } from '@frontend-monorepo/feature-account';
 import { FooterComponent, HeaderComponent } from '@frontend-monorepo/ui-components';
-import { FIRST_APP_COLORS, FIRST_APP_MENUS } from './core/constants/general.constants';
+import { FIRST_APP_COLORS, FIRST_APP_MENUS } from './general.constants';
 
 @Component({
     selector: 'fir-root',

@@ -1,6 +1,5 @@
 import { Injectable, WritableSignal, computed, signal } from '@angular/core';
-import { Alert } from '../util/alert.model';
-import { IAlert } from '../util/general.interface';
+import { Alert, IAlert } from '@frontend-monorepo/util-models';
 
 @Injectable({
 	providedIn: 'root'

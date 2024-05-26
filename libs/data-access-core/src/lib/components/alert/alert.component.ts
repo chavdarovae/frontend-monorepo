@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { AlertService } from '../../util/alert.service';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
     selector: 'app-alert',

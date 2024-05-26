@@ -1,4 +1,4 @@
-import { IMenuItem } from "@frontend-monorepo/ui-components";
+import { IMenuItem } from "@frontend-monorepo/util-models";
 
 export const SECOND_APP_COLORS: any = {
 	pri: '#d857ec',

@@ -1,4 +1,4 @@
-import { IAlert } from "./general.interface";
+import { IAlert } from "./gen.interface";
 
 export class Alert implements IAlert {
 	msg: string;

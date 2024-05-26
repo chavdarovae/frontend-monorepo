@@ -11,11 +11,11 @@
 		"lib": ["ES2022", "dom"],
 		"baseUrl": "./",
 		"paths": {
-			"@frontend-monorepo/data-access-core": ["modules/data-access-core/src/index.ts"],
-			"@frontend-monorepo/feature-workouts": ["modules/feature-workouts/src/index.ts"],
-			"@frontend-monorepo/feature-account": ["modules/feature-account/src/index.ts"],
-			"@frontend-monorepo/ui-components": ["modules/ui-components/src/index.ts"],
-			"@frontend-monorepo/util-models": ["modules/util-models/src/index.ts"],
+			"@frontend-monorepo/data-access-core": ["libs/data-access-core/src/index.ts"],
+			"@frontend-monorepo/feature-workouts": ["libs/feature-workouts/src/index.ts"],
+			"@frontend-monorepo/feature-account": ["libs/feature-account/src/index.ts"],
+			"@frontend-monorepo/ui-components": ["libs/ui-components/src/index.ts"],
+			"@frontend-monorepo/util-models": ["libs/util-models/src/index.ts"],
 			"@frontend-monorepo/environments": ["environments/environment.ts"],
 			"@frontend-monorepo/styles": ["styles/_variables.scss"],
 		}
