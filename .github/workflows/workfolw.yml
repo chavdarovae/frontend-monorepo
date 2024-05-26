@@ -41,5 +41,6 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/apps/firstApp
-          single-commit: true  # Ensures single commit to avoid merge conflicts
-          clean: true          # Ensures clean directory for deployment
+          clean: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
