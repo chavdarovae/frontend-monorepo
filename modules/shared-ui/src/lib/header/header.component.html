@@ -1,0 +1,14 @@
+<div class="container menu row row--sp-btw">
+	<a class="logo" routerLink="">
+		<img [src]="logoPath" alt="logo.png">
+	</a>
+
+	<a *ngFor="let item of menuItems; let first = first"
+		[routerLink]="item.path"
+		routerLinkActive="router-link-active"
+		[class]="first ?  'ml-a' :  'ml-20'"
+		mat-button>
+		{{item.title}}
+	</a>
+</div>
+
