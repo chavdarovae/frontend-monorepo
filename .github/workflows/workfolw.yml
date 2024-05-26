@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "cahvdarovae"
           git config user.email "chavdarova.e@gmail.com"
+          cd dist/apps/firstApp  # Navigate to the directory containing the changes
           git add .
           git commit -m "Deploy to gh-pages"
-          git subtree split --prefix dist/apps/firstApp -b gh-pages
-          git push --force origin gh-pages:gh-pages
+          git push --force origin HEAD:gh-pages
