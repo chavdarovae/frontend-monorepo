@@ -30,9 +30,6 @@ jobs:
       - name: Build project
         run: npm run build:prod:firstApp
 
-      - name: List files in the distribution directory
-        run: ls -R
-
       - name: Clean up previous deployment
         run: |
           git worktree prune
@@ -42,5 +39,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          publish_dir: ./dist/apps/firstApp  # adjust the path to your built Angular app
+          publish_dir: ./dist/apps/firstApp
           publish_branch: gh-pages
