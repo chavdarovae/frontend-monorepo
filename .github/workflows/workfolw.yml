@@ -31,8 +31,13 @@ jobs:
       - name: List files in the distribution directory
         run: ls -R
 
+      - name: Clean up previous deployment
+        run: |
+          git worktree prune
+          rm -rf github-pages-deploy-action-temp-deployment-folder
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: dist/apps/firstApp
