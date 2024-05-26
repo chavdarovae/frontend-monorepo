@@ -41,3 +41,5 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/apps/firstApp
+          single-commit: true  # Ensures single commit to avoid merge conflicts
+          clean: true          # Ensures clean directory for deployment
