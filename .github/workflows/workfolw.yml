@@ -1,4 +1,4 @@
-name: GitHubPages Deploy
+name: Deploy to gh-pages
 
 on:
   push:
@@ -15,9 +15,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Use v2, not v4
+        uses: actions/checkout@v2
         with:
-          persist-credentials: false  # Disable persist credentials
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -38,11 +38,11 @@ jobs:
           git worktree prune
           rm -rf github-pages-deploy-action-temp-deployment-folder
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: dist/apps/firstApp
-          clean: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+      - name: Deploy to gh-pages
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy to gh-pages"
+          git subtree split --prefix dist/apps/firstApp -b gh-pages
+          git push --force origin gh-pages:gh-pages
