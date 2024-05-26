@@ -29,9 +29,7 @@ jobs:
         run: npm run build:prod:firstApp
 
       - name: List files in the distribution directory
-        run: |
-          cd dist
-          ls -R
+        run: ls -R
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
