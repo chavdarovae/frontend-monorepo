@@ -19,8 +19,13 @@ export const FIRST_APP_MENUS: IMenuItem[] = [
 		path: '/about',
 		title: 'About',
 	},
-	{
+    {
 		id: 2,
+		path: '/books',
+		title: 'Books',
+	},
+	{
+		id: 3,
 		path: '/logout',
 		title: 'Logout',
 	}

@@ -1,0 +1,1 @@
+export type BookInteractionType =  'create' | 'delete' | 'update' | 'like';

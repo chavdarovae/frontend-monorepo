@@ -27,4 +27,6 @@ $text-pri: var(--texPri);
 $text-sec: var(--textSec);
 $bg-pri: var(--bgPri);
 $bg-sec: var(--app);
-$rounding: var(--bgSec);
+$rounding: var(--rounding);
+$shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$shadow-hover: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);

@@ -5,7 +5,7 @@ import { HttpClientXsrfModule, provideHttpClient, withInterceptorsFromDi } from 
 import { importProvidersFrom } from '@angular/core';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, provideRouter, withComponentInputBinding } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { FIRST_APP_ROUTES } from './app/app.routes';
 
@@ -15,9 +15,16 @@ bootstrapApplication(AppComponent, {
 		importProvidersFrom(
 			CommonModule,
 			BrowserModule,
-			RouterModule.forRoot(FIRST_APP_ROUTES, { anchorScrolling: 'enabled', scrollPositionRestoration: 'disabled', onSameUrlNavigation: 'reload', useHash: true }),
+			RouterModule.forRoot(FIRST_APP_ROUTES, 
+                { 
+                    anchorScrolling: 'enabled', 
+                    scrollPositionRestoration: 'disabled', 
+                    onSameUrlNavigation: 'reload', 
+                    useHash: true
+                }),
 			HttpClientXsrfModule,
 		),
+        provideRouter(FIRST_APP_ROUTES, withComponentInputBinding()),
 		provideAnimations(),
 		provideHttpClient(withInterceptorsFromDi())
 	]

@@ -1,0 +1,10 @@
+.form  {
+	width: 700px;
+
+    & > *,
+    input,
+    textarea {
+        width: 100%;
+    }
+}
+

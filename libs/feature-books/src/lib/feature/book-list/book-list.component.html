@@ -1,0 +1,19 @@
+<div class="container">
+	<br>
+	<br>
+	<app-section-title [title]="title" creationUrl="/books/new"></app-section-title>
+	<br>
+	<hr>
+	<div class="row row--sp-around row--wrap">
+
+		@for (book of bookList(); track book._id) {
+			<app-book-preview class="mb-20" [book]="book" (click)="showDetails(book._id)"></app-book-preview>
+		} @empty {
+			<div>There were no items in the list.</div>
+		}
+	</div>
+
+	<hr>
+	<div>Total number of registered books: {{totalBooks()}}</div>
+	<div>Total number of registered book likes: {{totalLikes()}}</div>
+</div>

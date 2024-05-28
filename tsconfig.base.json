@@ -1,23 +1,32 @@
 {
-	"compileOnSave": false,
-	"compilerOptions": {
-		"sourceMap": true,
-		"declaration": false,
-		"moduleResolution": "node",
-		"experimentalDecorators": true,
-		"importHelpers": true,
-		"target": "ES2022",
-		"module": "ES2022",
-		"lib": ["ES2022", "dom"],
-		"baseUrl": "./",
-		"paths": {
-			"@frontend-monorepo/data-access-core": ["libs/data-access-core/src/index.ts"],
-			"@frontend-monorepo/feature-workouts": ["libs/feature-workouts/src/index.ts"],
-			"@frontend-monorepo/feature-account": ["libs/feature-account/src/index.ts"],
-			"@frontend-monorepo/ui-components": ["libs/ui-components/src/index.ts"],
-			"@frontend-monorepo/util-models": ["libs/util-models/src/index.ts"],
-			"@frontend-monorepo/environments": ["environments/environment.ts"],
-			"@frontend-monorepo/styles": ["styles/_variables.scss"],
-		}
-	}
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@frontend-monorepo/data-access-core": [
+        "libs/data-access-core/src/index.ts"
+      ],
+      "@frontend-monorepo/environments": ["environments/environment.ts"],
+      "@frontend-monorepo/feature-account": [
+        "libs/feature-account/src/index.ts"
+      ],
+      "@frontend-monorepo/feature-workouts": [
+        "libs/feature-workouts/src/index.ts"
+      ],
+      "@frontend-monorepo/feature-books": [
+        "libs/feature-books/src/index.ts"
+      ],
+      "@frontend-monorepo/styles": ["styles/_variables.scss"],
+      "@frontend-monorepo/ui-components": ["libs/ui-components/src/index.ts"],
+      "@frontend-monorepo/util-models": ["libs/util-models/src/index.ts"]
+    }
+  }
 }

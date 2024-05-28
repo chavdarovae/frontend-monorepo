@@ -9,7 +9,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: $bg-pri;
-	overflow: hidden;
+    overflow-y: scroll;
+
 
 	* {
 		font-family: "Nunito", sans-serif;
@@ -93,8 +94,12 @@ a,
 	color: $text-pri;
 
 	&:hover {
-		scale: 1.05;
+		// scale: 1.05;
 	}
+}
+
+hr {
+    margin-top: 30px;
 }
 
 //components
@@ -107,6 +112,25 @@ button {
 
 .btn {
 	font-size: 1.5em;
+    font-weight: 700;
+    border: none;
+    box-shadow: $shadow;
+    border-radius: $rounding !important;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+}
+
+
+.form.READ  {
+
+    mat-form-field,
+    mat-form-field * {
+        color: $text-pri !important;
+        background: $bg-sec !important;
+    }
 }
 
 // utils

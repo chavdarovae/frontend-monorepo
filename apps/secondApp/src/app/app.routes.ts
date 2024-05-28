@@ -13,6 +13,8 @@ export const SECOND_APP_ROUTES: Routes = [
 	{
 		path: 'workouts',
 		loadChildren: () => import('libs/feature-workouts/src').then(r => r.WORKOUT_ROUTES),
-		data: { listViewTitle: 'Second application / Workout list view'}
+        data: {
+            title: 'Workout List'
+        }
 	}
 ];

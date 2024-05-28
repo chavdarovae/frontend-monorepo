@@ -1,8 +1,8 @@
-import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { ActivatedRoute, Data, RouterLink } from '@angular/router';
-import { Observable } from 'rxjs';
+import { RouterLink } from '@angular/router';
+import { SectionTitleComponent } from '@frontend-monorepo/ui-components';
 import { WorkoutsService } from '../../data-access/workouts.service';
 import { WorkoutPreviewComponent } from '../../ui/workout-preview/workout-preview.component';
 import { IWorkout } from '../../util/interface/workout.interfaces';
@@ -12,13 +12,17 @@ import { IWorkout } from '../../util/interface/workout.interfaces';
     templateUrl: './workout-list.component.html',
     styleUrls: ['./workout-list.component.scss'],
     standalone: true,
-    imports: [RouterLink, MatButtonModule, WorkoutPreviewComponent, JsonPipe, AsyncPipe, NgIf],
+    imports: [
+        SectionTitleComponent,
+        RouterLink,
+        MatButtonModule,
+        WorkoutPreviewComponent,
+        CommonModule
+    ],
 	providers: [WorkoutsService]
 })
 export class WorkoutListComponent implements OnInit {
 	private workoutsService = inject(WorkoutsService);
-	private activatedRoute = inject(ActivatedRoute);
-	data$!: Observable<Data>;
 
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
 
@@ -29,21 +33,18 @@ export class WorkoutListComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.workoutsService.refreshList();
-		this.data$ = this.activatedRoute.data.pipe(
-			// tap((res) => console.log(res))
-		);
 	}
 
-	deleteWorkout(workout: IWorkout) {
-		this.workoutsService.modifyWorkoutSubject.next({type: 'delete', workout});
+	deleteWorkout(entity: IWorkout) {
+		this.workoutsService.modifyWorkoutSubject.next({action: 'delete', entity});
 	}
 
-	likeWorkout(workout: IWorkout) {
-		workout.likes = workout.likes ? workout.likes + 1 : 1;
-		this.workoutsService.modifyWorkoutSubject.next({type: 'modify', workout});
+	likeWorkout(entity: IWorkout) {
+		entity.likes = entity.likes ? entity.likes + 1 : 1;
+		this.workoutsService.modifyWorkoutSubject.next({action: 'modify', entity});
 	}
 
-	selectWorkout(workout: IWorkout) {
-		this.workoutsService.modifyWorkoutSubject.next({type: 'select', workout});
+	selectWorkout(entity: IWorkout) {
+		this.workoutsService.modifyWorkoutSubject.next({action: 'select', entity});
 	}
 }
