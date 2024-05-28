@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, computed, inject } from '@angular/core';
+import { Component, Input, OnInit, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { SectionTitleComponent } from '@frontend-monorepo/ui-components';
@@ -22,7 +22,10 @@ import { IWorkout } from '../../util/interface/workout.interfaces';
 	providers: [WorkoutsService]
 })
 export class WorkoutListComponent implements OnInit {
+    // services
 	private workoutsService = inject(WorkoutsService);
+
+    @Input() title!: string;
 
 	workoutList = this.workoutsService.workoutsSnl; // reference to signal not the value of the signal
 

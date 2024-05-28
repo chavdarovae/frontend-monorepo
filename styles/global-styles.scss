@@ -123,12 +123,26 @@ button {
     }
 }
 
+.icon {
+    position: relative;
+    font-size: 20px;
+    &__count {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        z-index: 1;
+        color: $text-pri !important;
+        font-size: 7px;
+    }
+}
+
 
 .form.READ  {
 
     mat-form-field,
     mat-form-field * {
-        color: $text-pri !important;
+        color: $text-sec !important;
         background: $bg-sec !important;
     }
 }

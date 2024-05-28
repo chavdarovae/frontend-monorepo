@@ -1,6 +1,8 @@
 
 <div *ngIf="{action: userInteraction$ | async} as intercationSubs" class="container">
-	<hr>
+	<br>
+    <br>
+    <hr>
 	<div *ngIf="currBook"  class="col col--centered">
 		<h2>{{ id !== 'new' ? 'Book:' + currBook.title : 'Create new book'}}</h2>
 		<form #bookForm="ngForm" [class]="'form col ' + currViewMode">
@@ -61,13 +63,15 @@
                 </a>
                 <ng-container [ngSwitch]="currViewMode">
                     <ng-container *ngSwitchCase="viewMode.READ">
-                        <button
+                        <button 
                             mat-raised-button
                             color="primary"
                             type="button"
                             class="ml-a"
                             (click)="currBook.likes = currBook.likes + 1; modifyCurrBook('like')">
-                            Like
+                            <span class="icon fa-solid fa-heart">
+                                <span class="icon__count">{{currBook.likes}}</span>
+                            </span> Like
                         </button>
 
                         <button

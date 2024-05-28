@@ -81,8 +81,8 @@ export class BookDetailComponent implements OnInit {
             tap(() => {
                 this.alertService.showAlert(`The entity has been ${ACTION_MAP[this.currInteraction]}.`, 'success');
                 this.ongoingRequest = false;
-                this.bookForm.resetForm();
                 if(!['like'].includes(this.currInteraction)) {
+                    this.bookForm.resetForm();
                     this.router.navigate(['/books']);
                 }
             }),

@@ -23,6 +23,7 @@ import { IBook } from '../../util/book.interfaces';
     ]
 })
 export class BookListComponent implements OnInit {
+    // services 
 	private booksService = inject(BooksService);
 	private router = inject(Router);
 
