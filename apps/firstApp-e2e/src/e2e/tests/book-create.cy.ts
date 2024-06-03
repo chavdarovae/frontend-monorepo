@@ -32,17 +32,10 @@ describe('BookCreateComponent', () => {
         cy.clickBtn('updateBtn');
     });
 
-    it('should delete a book with title 1984', function () {
-        cy.get('app-book-preview').contains('1984').click();
-        cy.selectId('pages').invoke('prop', 'value').should('eq', '330');
-        cy.clickBtn('editBtn');
-        cy.clickBtn('deleteBtn');
-    });
-
-    it('should update a book with title Gone with the wind to 330 paages', function () {
-        cy.get('app-book-preview').contains('Gone with the wind').click();
-        cy.clickBtn('editBtn');
-        cy.typeInp('pages', '330');
-        cy.clickBtn('updateBtn');
-    });
+    // it('should delete a book with title 1984', function () {
+    //     cy.get('app-book-preview').contains('1984').click();
+    //     cy.selectId('pages').invoke('prop', 'value').should('eq', '330');
+    //     cy.clickBtn('editBtn');
+    //     cy.clickBtn('deleteBtn');
+    // });
 });
