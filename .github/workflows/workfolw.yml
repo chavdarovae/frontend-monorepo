@@ -30,6 +30,9 @@ jobs:
       - name: Build project
         run: npm run build:prod:firstApp
 
+      - name: e2e test
+        run: npx nx run firstApp-e2e:e2e --configuration=production
+        
       - name: Clean up previous deployment
         run: |
           git worktree prune
