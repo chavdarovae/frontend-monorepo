@@ -1,4 +1,4 @@
-import { NgClass, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IMenuItem } from '@frontend-monorepo/util-models';
@@ -8,7 +8,7 @@ import { IMenuItem } from '@frontend-monorepo/util-models';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     standalone: true,
-	imports: [ RouterModule, NgClass, NgFor ]
+	imports: [ RouterModule, CommonModule ]
 })
 export class HeaderComponent {
 	@Input() menuItems!: IMenuItem[];

@@ -1,0 +1,15 @@
+{
+    "validUser": {
+        "email": "lili.hammer@gmail.com",
+        "password": "testPassword123!",
+    },
+    "invalidUser": {
+        "email": "invalid@example.com",
+        "password": "testPassword123!",
+        "response": {
+            "body": {
+                "error": "Incorrect emial"
+            }
+        }
+    }
+}

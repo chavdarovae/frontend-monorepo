@@ -11,6 +11,7 @@
 				<input 
                     matInput 
                     name="title" 
+                    data-testid="title"
                     [(ngModel)]="currBook.title"  
                     [disabled]="currViewMode === viewMode.READ"
                     required
@@ -22,6 +23,7 @@
 				<input 
                     matInput 
                     name="author" 
+                    data-testid="author"
                     [(ngModel)]="currBook.author" 
                     [disabled]="currViewMode === viewMode.READ"
                     required
@@ -33,6 +35,7 @@
 				<input 
                     matInput 
                     name="pages" 
+                    data-testid="pages"
                     [(ngModel)]="currBook.pages" 
                     [disabled]="currViewMode === viewMode.READ"
                     required
@@ -44,6 +47,7 @@
 				<textarea 
                     matInput 
                     name="summary" 
+                    data-testid="summary"
                     [(ngModel)]="currBook.summary" 
                     [disabled]="currViewMode === viewMode.READ"
                     required
@@ -57,6 +61,7 @@
                         mat-raised-button
                         color="primary"
                         type="button"
+                        data-testid="backToListBtn"
                         (click)="bookForm.resetForm()">
                         Back to list
                     </button>
@@ -67,6 +72,7 @@
                             mat-raised-button
                             color="primary"
                             type="button"
+                            data-testid="likeBtn"
                             class="ml-a"
                             (click)="currBook.likes = currBook.likes + 1; modifyCurrBook('like')">
                             <span class="icon fa-solid fa-heart">
@@ -78,6 +84,7 @@
                             mat-raised-button
                             color="accent"
                             type="button"
+                            data-testid="editBtn"
                             class="ml-a"
                             (click)="currViewMode = viewMode.EDIT">
                             Edit
@@ -89,6 +96,7 @@
                             mat-raised-button
                             color="warn"
                             type="button"
+                            data-testid="deleteBtn"
                             (click)="modifyCurrBook('delete')">
                             Delete
                         </button>
@@ -97,6 +105,7 @@
                             mat-raised-button
                             color="accent"
                             type="button"
+                            data-testid="updateBtn"
                             [disabled]="bookForm.invalid"
                             (click)="modifyCurrBook('update')">
                             Update
@@ -108,6 +117,7 @@
                             mat-raised-button
                             color="primary"
                             type="button"
+                            data-testid="clearBtn"
                             class="ml-a"
                             (click)="bookForm.resetForm()">
                             Clear
@@ -117,6 +127,7 @@
                             mat-raised-button
                             color="accent"
                             type="button"
+                            data-testid="createBtn"
                             [disabled]="bookForm.invalid"
                             (click)="modifyCurrBook('create')">
                             Create Book

@@ -5,6 +5,7 @@
 
 	<a *ngFor="let item of menuItems; let first = first"
 		[routerLink]="item.path"
+        [attr.data-testid]="'nav-' + (item.title | lowercase)"
 		routerLinkActive="router-link-active"
 		[class]="first ?  'ml-a' :  'ml-20'"
 		mat-button>

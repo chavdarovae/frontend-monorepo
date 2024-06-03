@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const FIRST_APP_ROUTES: Routes = [
-	{
+    {
 		path: '',
 		redirectTo: 'login',
 		pathMatch: 'full'
@@ -16,5 +16,5 @@ export const FIRST_APP_ROUTES: Routes = [
         data: {
             title: 'Book List'
         }
-	}
+	},
 ];

@@ -4,13 +4,13 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <p>
 	<mat-form-field>
-	  <input type="email" matInput placeholder="E-mail" formControlName="email">
+	  <input type="email" matInput placeholder="E-mail" formControlName="email" data-testid="email">
 	</mat-form-field>
   </p>
 
   <p>
 	<mat-form-field>
-	  <input type="password" matInput placeholder="Password" formControlName="password">
+	  <input type="password" matInput placeholder="Password" formControlName="password" data-testid="password">
 	</mat-form-field>
   </p>
 
@@ -19,7 +19,7 @@
   </p>
 
   <div class="row row--centered" >
-	<button type="submit" class="button" mat-button>Login</button>
+	<button type="submit" class="button" mat-button data-testid="submit">Login</button>
   </div>
 
 </form>
